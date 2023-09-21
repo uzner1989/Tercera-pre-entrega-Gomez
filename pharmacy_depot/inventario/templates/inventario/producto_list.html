@@ -1,0 +1,16 @@
+{% extends 'inventario/base.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Productos</title>
+</head>
+<body>
+    <h1>Listado de Productos</h1>
+    <ul>
+        {% for producto in productos %}
+            <li><a href="{% url 'producto_detail' producto.id %}">{{ producto.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
